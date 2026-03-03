@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a2e, #2c5f2d);
+    color: #e8f5e9;
+}
+
+nav {
+    background-color: #1b4332;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #163d2b;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+ol, ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #1b4332;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2d6a4f;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    background-color: #40916c;
+    box-shadow: 0 0 5px #a3f7bf;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #52b788;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #52b788, #95d5b2);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #40916c, #74c69d);
+    transform: translateY(-2px);
+}
+
+article, section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1b4332;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #081c15;
+    font-size: 14px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-left: 8px;
+    font-weight: normal;
+}

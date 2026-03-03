@@ -88,3 +88,28 @@ input[type="submit"]:hover, #resetBtn:hover {
 @keyframes fadeIn {
     to { opacity: 1; }
 }
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2d6a4f;
+    color: white;
+    outline: none;
+}
+
+input[type="date"]:focus {
+    background-color: #40916c;
+    box-shadow: 0 0 5px #a3f7bf;
+}
+
+div input[type="radio"] {
+    accent-color: #52b788; 
+    margin-right: 6px;
+    transform: scale(1.2); 
+}
+
+div label {
+    margin-right: 15px; 
+    cursor: pointer;
+}

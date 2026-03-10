@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>NavBar</nav>
+    <main>
+        Main Content
+        <i>Italic</i>
+        <b>Bold</b>
+        <br>
+        <strong>Strong</strong>
+        <sub>Sub</sub>
+        <sup>Sup</sup>
+        <ul>
+            <li>Item</li>
+            <li>Item</li>
+        </ul>
+        <ol>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+    </main>
+
+    <form method="POST" action="http://localhost:3000/echo">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Ion" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="ion@example.com" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="4" required>
+        </div>
+        <div>
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate">
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+40 7xx xxx xxx">
+        </div>
+        <div>
+            <label for="date"> Data:</label>
+            <input type="date" id="date" name="date" min = "2024-01-01">
+
+        </div>
+        <div>
+            <input type="radio" name="grupa" id="grupa1" value="grupa1" checked>
+            <label for="grupa1">Grupa 1</label>
+
+            <input type="radio" name="grupa" id="grupa2" value="grupa2">
+            <label for="grupa2">Grupa 2</label>
+
+            <input type="radio" name="grupa" id="grupa3" value="grupa3">
+            <label for="grupa3">Grupa 3</label>
+
+            <input type="radio" name="grupa" id="grupa4" value="grupa4">
+            <label for="grupa4">Grupa 4</label>
+        </div>
+        <div>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">Accept Terms and Conditions</label>
+        </div>
+
+        <div>
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+    <article>Article</article>
+    <section>Section</section>
+    <footer>Footer</footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

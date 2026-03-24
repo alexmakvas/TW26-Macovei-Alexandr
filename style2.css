@@ -1,0 +1,52 @@
+nav {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  background-color: blue;
+}
+
+.card button {
+  color: white;
+}
+
+.btn, .btn-success {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: green;
+}
+
+.p1 {
+  padding: 10px;
+}
+
+.p2 {
+  padding: 20px;
+}
+
+.p4 {
+  padding: 40px;
+}
+
+.p8 {
+  padding: 80px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 500px;
+  }
+}
+@media print {
+  .btn, .btn-success {
+    display: none;
+  }
+}/*# sourceMappingURL=style2.css.map */

@@ -1,0 +1,25 @@
+
+
+
+main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+}
+.container{
+    display: flex;
+    column-gap: 20px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);;
+    gap: 20px;
+    padding: 10px;
+    padding-top: 100px;
+}

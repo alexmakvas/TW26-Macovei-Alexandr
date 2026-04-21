@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme</title>
+</head>
+<body>
+    <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="500" y2="0" stroke="red" stroke-width="4"  />
+        <line x1="0" y1="500" x2="500" y2="500" stroke="red" stroke-width="4"  />
+        <line x1="0" y1="0" x2="0" y2="500" stroke="red" stroke-width="4"  />
+        <line x1="500" y1="0" x2="500" y2="500" stroke="red" stroke-width="4"  />
+        <circle cx="150" cy="100" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        <ellipse cx="200" cy="200" rx="50" ry="20" stroke="blue" stroke-width="2" fill="red" />
+        <rect x="300" y="300" width="100" height="50" stroke="purple" stroke-width="3" fill="pink" />
+        <polyline points="50,250 150,250 100,300 50,250" stroke="orange" stroke-width="2" fill="none" />
+        <polygon points="250,50 300,150 200,150" stroke="cyan" stroke-width="2" fill="lightblue" />
+        <path d="M 10,80 C 40,10 65,10 95,80 S 80,300" stroke="magenta" stroke-width="2" fill="none" />
+    </svg>
+    <span>Span</span>
+    <h1>H1</h1>
+    <h2 id="h2">H2</h2>
+    <h3 class="h3">H3</h3>
+    <script>
+        console.log(document.body.children);
+        console.log(document.body.childNodes);
+        console.log(document.getElementById("h2"));
+        document.getElementById("h2").textContent = "H2 - Updated";
+        console.log(document.getElementsByClassName("h3"));
+        document.getElementsByClassName("h3")[0].innerHTML = '<a href="https://www.example.com">H3 - Link</a>';
+        document.querySelector("h3.h3").innerText = "H3 - Updated with querySelector";
+    
+        const h4 = document.createElement("h4");
+        h4.textContent = "H4 - Created with JavaScript";
+        document.body.appendChild(h4);
+    </script>
+
+
+</body>
+</html>

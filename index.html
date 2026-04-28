@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="curs-list">
+        
+    </ul>
+
+    <script>
+        function fetchJson(path) {
+            return fetch(path)
+                .then(r => r.json())
+                .then(data => {
+                    console.log(data);
+                    return data;
+                })
+                .catch(e => console.error(e));
+        }
+
+        function fetchXML(path) {
+            fetch(path)
+                .then(r => r.text())
+                .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
+                .then(data => console.log(data))
+                .catch(e => console.error(e));
+        }
+
+        function XMLHttpRequestXml(path) {
+
+            const xmlReq = new XMLHttpRequest();
+
+            xmlReq.onreadystatechange = function() {
+                if (xmlReq.readyState === 4) {
+                    if (xmlReq.status === 200) {
+                        console.log(xmlReq.responseXML);
+                    } else {
+                        console.error("Error fetching XML");
+                    }
+                }
+            };
+
+            xmlReq.open("GET", path, true);
+            xmlReq.send()
+        }
+
+        function HTTPRequestJson(path) {
+
+            const jsonReq = new XMLHttpRequest();
+
+            jsonReq.onreadystatechange = function() {
+                if (jsonReq.readyState === 4) {
+                    if (jsonReq.status === 200) {
+                        console.log(JSON.parse(jsonReq.responseText));
+                    } else {
+                        console.error("Error fetching JSON");
+                    }
+                }
+            };
+
+            jsonReq.open("GET", path, true);
+            jsonReq.send()
+        }
+
+        function displayCurs(data) {
+            const cursList = document.getElementById("curs-list");
+            data.exchangeRates.forEach(curs => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${curs.fromCoin}/${curs.toCoin}: ${curs.value}`;
+                cursList.appendChild(listItem);
+            });
+        }
+
+        fetchJson("curs.json");
+        fetchXML("curs.xml");
+        XMLHttpRequestXml("curs.xml");
+        HTTPRequestJson("curs.json");
+        fetchJson("curs.json").then(data => displayCurs(data));
+    </script>
+</body>
+</html>

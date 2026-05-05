@@ -22,3 +22,11 @@ window.addEventListener("popstate", () => {
 
 history.replaceState({}, "", "/home");
 router("/home");
+
+document.getElementById("span").addEventListener("click", (event) => {
+    console.log("Span clicked");
+    event.stopPropagation();
+});
+document.getElementById("div").addEventListener("click", () => {
+    console.log("Div clicked");
+});
